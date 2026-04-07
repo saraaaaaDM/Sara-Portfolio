@@ -1,0 +1,125 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+
+html, body { height: 100%; }
+
+/* FONT + BACKGROUND */
+body { 
+    font-family: 'Instrument Serif', serif; 
+    background: #000; 
+    color: #fff; 
+    overflow: hidden; /* IMPORTANT POUR LE SCALE */
+    transform-origin: top left; /* SCALE BASE */
+}
+
+/* NAVBAR */
+nav {
+  position: fixed; /* reste en haut pendant le scale */
+  top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  z-index: 20;
+}
+
+nav a { 
+    color:white;
+    font-size: 50px; 
+    text-decoration:none; 
+    opacity:0.8; 
+    transition:0.3s; 
+}
+
+nav a:hover { 
+    opacity:1; 
+}
+
+/* DRAGGABLE ELEMENTS - HOME */
+.home-section {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.item {
+  position: absolute;
+  cursor: grab;
+  transition: transform 0.2s ease;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.item:hover {
+  transform: scale(1.1);
+}
+
+.item:active {
+  cursor: grabbing;
+  transform: scale(1.2);
+}
+
+/* TITLE */
+.home-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 300px;
+  text-align: center;
+  z-index:5;
+}
+
+/* SECTIONS */
+.section {
+  display: flex;
+  min-height: 100vh;
+  padding: 50px;
+  gap: 50px;
+}
+
+.section-left {
+  flex: 1;
+  position: sticky;
+  top: 50px;
+  align-self: flex-start;
+}
+
+.section-left h2 {
+  font-size: 60px;
+  line-height: 5;
+}
+
+.section-right {
+  flex: 2;
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+  gap: 100px;
+}
+
+.section-right img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.section-right img:hover {
+  transform: scale(1.05) rotate(-1deg);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.7);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .section {
+    flex-direction: column;
+  }
+  .section-left {
+    position: static;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+ 
+  .section-right {
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+  }
+}
