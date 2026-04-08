@@ -1,47 +1,66 @@
+const ZONE_W = 1200; // width CSS déclarée de .center-zone
+const ZONE_H = 600;  // height CSS déclarée de .center-zone
+const PADDING = 40;   // marge min autour de la zone (px viewport)
+
+function getZoneScale() {
+  const scaleX = (window.innerWidth  - PADDING * 2) / ZONE_W;
+  const scaleY = (window.innerHeight - PADDING * 2) / ZONE_H;
+  return Math.min(scaleX, scaleY, 1); // jamais > 1 (pas de zoom sur grand écran)
+}
+
+function applyScale() {
+  const scale = getZoneScale();
+  document.querySelector(".center-zone").style.transform =
+    `translate(-50%, -50%) scale(${scale})`;
+}
+
+// Appliquer au chargement et à chaque resize
+applyScale();
+window.addEventListener("resize", applyScale);
+
+
+// ─── DRAG ───────────────────────────────────────────────
+
 const items = document.querySelectorAll(".item");
 
 items.forEach(item => {
   let isDragging = false;
-  let offsetX = 0, offsetY = 0;
+  let startX = 0, startY = 0, mouseStartX = 0, mouseStartY = 0;
 
-  // MOUSE DRAG
-  item.addEventListener("mousedown", e => {
+  function startDrag(clientX, clientY) {
     isDragging = true;
-    offsetX = e.clientX - item.offsetLeft;
-    offsetY = e.clientY - item.offsetTop;
+    startX = parseInt(item.style.left) || item.offsetLeft;
+    startY = parseInt(item.style.top)  || item.offsetTop;
+    mouseStartX = clientX;
+    mouseStartY = clientY;
     item.style.cursor = "grabbing";
-  });
+    item.style.zIndex = "10";
+  }
 
-  document.addEventListener("mousemove", e => {
+  function moveDrag(clientX, clientY) {
     if (!isDragging) return;
-    item.style.left = e.clientX - offsetX + "px";
-    item.style.top = e.clientY - offsetY + "px";
-  });
+    const scale = getZoneScale(); // correction vitesse drag / scale visuel
+    item.style.left = (startX + (clientX - mouseStartX) / scale) + "px";
+    item.style.top  = (startY + (clientY - mouseStartY) / scale) + "px";
+  }
 
-  document.addEventListener("mouseup", e => {
+  function endDrag() {
     if (!isDragging) return;
     isDragging = false;
     item.style.cursor = "grab";
-  });
+    item.style.zIndex = "";
+  }
 
-  // TOUCH DRAG (mobile)
+  item.addEventListener("mousedown", e  => startDrag(e.clientX, e.clientY));
+  document.addEventListener("mousemove", e  => moveDrag(e.clientX, e.clientY));
+  document.addEventListener("mouseup",   ()  => endDrag());
+
   item.addEventListener("touchstart", e => {
-    isDragging = true;
-    const touch = e.touches[0];
-    offsetX = touch.clientX - item.offsetLeft;
-    offsetY = touch.clientY - item.offsetTop;
+    startDrag(e.touches[0].clientX, e.touches[0].clientY);
   }, { passive: false });
-
   item.addEventListener("touchmove", e => {
-    if (!isDragging) return;
     e.preventDefault();
-    const touch = e.touches[0];
-    item.style.left = touch.clientX - offsetX + "px";
-    item.style.top = touch.clientY - offsetY + "px";
+    moveDrag(e.touches[0].clientX, e.touches[0].clientY);
   }, { passive: false });
-
-  item.addEventListener("touchend", e => {
-    if (!isDragging) return;
-    isDragging = false;
-  });
+  item.addEventListener("touchend",  () => endDrag());
 });
