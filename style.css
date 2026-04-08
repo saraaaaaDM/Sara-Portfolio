@@ -80,7 +80,7 @@ nav a:hover { opacity: 1; }
 .item.coeur     { top: -42px;  left: -82px;  width: 90px;  }
 .item.fleur     { top: 451px; left: -418px;  width: 200px; }
 .item.papier    { top: -260px; left: 48px; rotate: calc(-10deg); width: 450px; }
-.item.ecouteurs { top: 419px; left: 616px;  width: 350px; }
+.item.ecouteurs { top: 581px; left: 547px;  width: 350px; }
 .item.basket    { top: 456px;   left: -52px;rotate: calc(20deg); width: 250px; }
 .item.fraise    { top: 427px;  left: 366px; width: 250px; }
 .item.noeud     { top: 100px;  left: 200px;  width: 150px; }
