@@ -136,6 +136,28 @@ nav a:hover { opacity: 1; }
   box-shadow: 0 15px 30px rgba(0,0,0,0.7);
 }
 
+.section-right-about {
+  flex: 2;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 290px;
+}
+.section-right-about img {
+  width: 25vw;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.section-right-about img:hover {
+  transform: scale(1.05) rotate(-1deg);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.7);
+}
+.section-right-about p {
+  font-size: 34px;
+  line-height: 1.6;
+  color: #ccc;
+}
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
   nav a { font-size: 30px; }

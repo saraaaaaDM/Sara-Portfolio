@@ -8,7 +8,7 @@ function getZoneScale() {
   return Math.min(scaleX, scaleY, 1); // jamais > 1 (pas de zoom sur grand écran)
 }
 
-function applyScale() {
+function applyScale() { 
   const scale = getZoneScale();
   document.querySelector(".center-zone").style.transform =
     `translate(-50%, -50%) scale(${scale})`;
