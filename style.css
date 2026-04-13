@@ -85,7 +85,7 @@ nav a:hover { opacity: 1; }
 .item.basket    { top: 395px;   left: 186px;rotate: calc(20deg); width: 150px; }
 .item.fraise    { top: 440px;  left: 407px; width: 200px; }
 .item.smiski    { top: 308.9px;  left: 404px; rotate: calc(30deg); width: 50px; z-index: -1;}
-.item.dés       { top: 180px;  left: 938px;  width: 50px; }
+.item.dés       { top: 131px;  left: 998px;  width: 50px; }
 .item.enveloppe { top: 36px;  left: 699px; width: 200px; rotate: calc(20deg); }
 .item.pochette  { top: 208px;  left: 770px; width: 460px; rotate: calc(-5deg); z-index: 5; pointer-events: none;  }
 .item.vinyle    { top: 255px;  left: 871px; width: 250px; rotate: calc(50deg); z-index: 0; transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1); }
