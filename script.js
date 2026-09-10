@@ -185,3 +185,334 @@ reveals.forEach(el => {
   el.classList.add("reveal");
   observer.observe(el);
 });
+
+// ═══════════════════════════════════════
+// POP-UP PROJETS
+// ═══════════════════════════════════════
+
+const projectModal =
+  document.getElementById("projectModal");
+
+const modalOverlay =
+  document.querySelector(".modal-overlay");
+
+const modalClose =
+  document.querySelector(".modal-close");
+
+const modalMainImage =
+  document.getElementById("modalMainImage");
+
+const modalTag =
+  document.getElementById("modalTag");
+
+const modalTitle =
+  document.getElementById("modalTitle");
+
+const modalDescription =
+  document.getElementById("modalDescription");
+
+const modalYear =
+  document.getElementById("modalYear");
+
+const modalTools =
+  document.getElementById("modalTools");
+
+const galleryThumbnails =
+  document.getElementById("galleryThumbnails");
+
+
+// ═══════════════════════════════════════
+// DONNÉES DES PROJETS
+// ═══════════════════════════════════════
+
+const projectsData = {
+
+  // ─────────────────────────────────────
+  // NOMA
+  // ─────────────────────────────────────
+
+  noma: {
+
+    tag:
+      "BRANDING • DIRECTION ARTISTIQUE",
+
+    title:
+      "NOMA",
+
+    description:
+      "NOMA est une marque de maillots de bain pensée pour différentes morphologies. Le projet part d’une réflexion autour des tailles standardisées et de la diversité des corps. J’ai imaginé une identité qui met en avant cette diversité plutôt que de chercher à la faire entrer dans une norme. J’ai travaillé autour de formes organiques inspirées du corps, d’un motif reconnaissable et d’une palette solaire et colorée. L’identité a ensuite été déclinée à travers le logo, la typographie, les couleurs, les motifs, les supports de communication et la direction artistique photographique.",
+
+    year:
+      "2025",
+
+    tools:
+      "Illustrator • Photoshop • InDesign",
+
+    images: [
+
+      "items/noma-planche.png",
+
+      "items/noma-photo-1.png",
+
+      "items/noma-motif-turquoise.png",
+
+      "items/noma-photo-2.png",
+
+      "items/noma-motif-rose.png",
+
+      "items/noma-motif-beige.png"
+
+    ]
+
+  },
+
+
+  // ─────────────────────────────────────
+  // PROJET 02
+  // ─────────────────────────────────────
+
+  project2: {
+
+    tag:
+      "PROJET 02",
+
+    title:
+      "Projet 02",
+
+    description:
+      "Description du projet à venir.",
+
+    year:
+      "2025",
+
+    tools:
+      "À définir",
+
+    images: [
+      "items/chat.jpg"
+    ]
+
+  },
+
+
+  // ─────────────────────────────────────
+  // PROJET 03
+  // ─────────────────────────────────────
+
+  project3: {
+
+    tag:
+      "PROJET 03",
+
+    title:
+      "Projet 03",
+
+    description:
+      "Description du projet à venir.",
+
+    year:
+      "2025",
+
+    tools:
+      "À définir",
+
+    images: [
+      "items/chat.jpg"
+    ]
+
+  }
+
+};
+
+
+// ═══════════════════════════════════════
+// OUVERTURE DU POP-UP
+// ═══════════════════════════════════════
+
+document
+  .querySelectorAll(".project-card")
+  .forEach(card => {
+
+    card.addEventListener("click", () => {
+
+      const projectId =
+        card.dataset.project;
+
+      const project =
+        projectsData[projectId];
+
+      if (!project) return;
+
+
+      // TEXTES
+
+      modalTag.textContent =
+        project.tag;
+
+      modalTitle.textContent =
+        project.title;
+
+      modalDescription.textContent =
+        project.description;
+
+      modalYear.textContent =
+        project.year;
+
+      modalTools.textContent =
+        project.tools;
+
+
+      // ═══════════════════════════════
+      // GALERIE
+      // ═══════════════════════════════
+
+      galleryThumbnails.innerHTML = "";
+
+
+      project.images.forEach(
+        (image, index) => {
+
+          const thumbnail =
+            document.createElement("img");
+
+          thumbnail.src =
+            image;
+
+          thumbnail.alt =
+            project.title +
+            " — image " +
+            (index + 1);
+
+
+          if (index === 0) {
+            thumbnail.classList.add("active");
+          }
+
+
+          thumbnail.addEventListener(
+            "click",
+            event => {
+
+              event.stopPropagation();
+
+
+              // petit fondu
+
+              modalMainImage.style.opacity =
+                "0";
+
+
+              setTimeout(() => {
+
+                modalMainImage.src =
+                  image;
+
+                modalMainImage.style.opacity =
+                  "1";
+
+              }, 150);
+
+
+              // active
+
+              document
+                .querySelectorAll(
+                  ".gallery-thumbnails img"
+                )
+                .forEach(img => {
+
+                  img.classList.remove(
+                    "active"
+                  );
+
+                });
+
+
+              thumbnail.classList.add(
+                "active"
+              );
+
+            }
+          );
+
+
+          galleryThumbnails.appendChild(
+            thumbnail
+          );
+
+        }
+      );
+
+
+      // première image
+
+      modalMainImage.src =
+        project.images[0];
+
+      modalMainImage.alt =
+        project.title;
+
+
+      // ouverture
+
+      projectModal.classList.add(
+        "active"
+      );
+
+      document.body.classList.add(
+        "modal-open"
+      );
+
+    });
+
+  });
+
+
+// ═══════════════════════════════════════
+// FERMETURE
+// ═══════════════════════════════════════
+
+function closeProjectModal() {
+
+  projectModal.classList.remove(
+    "active"
+  );
+
+  document.body.classList.remove(
+    "modal-open"
+  );
+
+}
+
+
+modalClose.addEventListener(
+  "click",
+  closeProjectModal
+);
+
+
+modalOverlay.addEventListener(
+  "click",
+  closeProjectModal
+);
+
+
+// ═══════════════════════════════════════
+// TOUCHE ESC
+// ═══════════════════════════════════════
+
+document.addEventListener(
+  "keydown",
+  event => {
+
+    if (
+      event.key === "Escape" &&
+      projectModal.classList.contains("active")
+    ) {
+
+      closeProjectModal();
+
+    }
+
+  }
+);
