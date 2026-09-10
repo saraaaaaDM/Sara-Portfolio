@@ -250,17 +250,13 @@ const projectsData = {
 
     images: [
 
-      "items/noma-planche.png",
-
-      "items/noma-photo-1.png",
-
-      "items/noma-motif-turquoise.png",
-
-      "items/noma-photo-2.png",
-
-      "items/noma-motif-rose.png",
-
-      "items/noma-motif-beige.png"
+      "items/1.png",
+      "items/2.png",
+      "items/3.png",
+      "items/4.png",  
+      "items/5.png",
+      "items/6.png",
+      "items/7.png",
 
     ]
 
