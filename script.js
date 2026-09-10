@@ -287,7 +287,6 @@ Ce projet m’a permis d’approfondir ma pratique de l’UX/UI et de réfléchi
     images: [
       "items/Keycloak.png",
       "items/keycloak-2.png",
-      "items/keycloak-1.png",
       "items/keycloak-3.mp4",
       "items/keycloak-4.png"
     ]
