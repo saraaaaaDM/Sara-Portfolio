@@ -70,49 +70,149 @@
     </div>
   </section>
 
-  <!-- FOLIO SECTION -->
-  <section id="folio" class="section">
-    <div class="section-left">
-      <h2>PROJETS</h2>
+  <!-- ═══════════════════════════════════════
+     FOLIO SECTION
+     ═══════════════════════════════════════ -->
+
+<section id="folio" class="section">
+
+  <div class="section-left">
+    <h2>PROJETS</h2>
+  </div>
+
+  <div class="section-right projects">
+
+    <!-- NOMA -->
+    <article class="project-card" data-project="noma">
+
+      <div class="project-media">
+        <img src="items/noma-planche.png" alt="NOMA — Swimwear for every body">
+      </div>
+
+      <div class="project-meta">
+        <span class="tag">BRANDING • DIRECTION ARTISTIQUE</span>
+
+        <h3>NOMA</h3>
+
+        <p>
+          Swimwear for every body — création d’une identité visuelle
+          pensée autour de la diversité des morphologies.
+        </p>
+      </div>
+
+    </article>
+
+
+    <!-- PROJET 02 — À REMPLIR PLUS TARD -->
+    <article class="project-card" data-project="project2">
+
+      <div class="project-media">
+        <img src="items/chat.jpg" alt="Projet 02">
+      </div>
+
+      <div class="project-meta">
+        <span class="tag">PROJET 02</span>
+
+        <h3>Projet 02</h3>
+
+        <p>
+          Présentation du projet à venir.
+        </p>
+      </div>
+
+    </article>
+
+
+    <!-- PROJET 03 — À REMPLIR PLUS TARD -->
+    <article class="project-card" data-project="project3">
+
+      <div class="project-media">
+        <img src="items/chat.jpg" alt="Projet 03">
+      </div>
+
+      <div class="project-meta">
+        <span class="tag">PROJET 03</span>
+
+        <h3>Projet 03</h3>
+
+        <p>
+          Présentation du projet à venir.
+        </p>
+      </div>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     POP-UP PROJET
+     ═══════════════════════════════════════ -->
+
+<div class="project-modal" id="projectModal">
+
+  <div class="modal-overlay"></div>
+
+  <div class="modal-window">
+
+    <button class="modal-close" aria-label="Fermer">
+      ×
+    </button>
+
+    <div class="modal-content">
+
+      <!-- GALERIE -->
+      <div class="modal-gallery">
+
+        <div class="gallery-main">
+          <img id="modalMainImage" src="" alt="">
+        </div>
+
+        <div
+          class="gallery-thumbnails"
+          id="galleryThumbnails">
+        </div>
+
+      </div>
+
+
+      <!-- INFORMATIONS -->
+      <div class="modal-info">
+
+        <span
+          class="modal-tag"
+          id="modalTag">
+        </span>
+
+        <h2 id="modalTitle"></h2>
+
+        <div class="modal-line"></div>
+
+        <p id="modalDescription"></p>
+
+        <div class="modal-details">
+
+          <div>
+            <span>ANNÉE</span>
+            <p id="modalYear"></p>
+          </div>
+
+          <div>
+            <span>OUTILS</span>
+            <p id="modalTools"></p>
+          </div>
+
+        </div>
+
+      </div>
+
     </div>
 
-    <div class="section-right projects">
+  </div>
 
-      <a class="project-card" href="#">
-        <div class="project-media">
-          <img src="items/chat.jpg" alt="Projet 01">
-        </div>
-        <div class="project-meta">
-          <span class="tag">UI/UX • DEV</span>
-          <h3>Projet 01</h3>
-          <p>Conception d’une interface interactive centrée sur l’expérience utilisateur.</p>
-        </div>
-      </a>
-
-      <a class="project-card" href="#">
-        <div class="project-media">
-          <img src="items/chat.jpg" alt="Projet 02">
-        </div>
-        <div class="project-meta">
-          <span class="tag">GRAPHISME</span>
-          <h3>Projet 02</h3>
-          <p>Création d’une identité visuelle complète et système graphique.</p>
-        </div>
-      </a>
-
-      <a class="project-card" href="#">
-        <div class="project-media">
-          <img src="items/chat.jpg" alt="Projet 03">
-        </div>
-        <div class="project-meta">
-          <span class="tag">DIRECTION ARTISTIQUE</span>
-          <h3>Projet 03</h3>
-          <p>Exploration visuelle et conception d’univers narratif.</p>
-        </div>
-      </a>
-
-    </div>
-  </section>
+</div>
 
   <!-- CONTACT SECTION -->
   <section id="contact" class="section">
