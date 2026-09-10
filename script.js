@@ -108,7 +108,7 @@ items.forEach(item => {
     const scale = currentScale;
 
     item.style.left = (startX + (clientX - mouseStartX) / scale) + "px";
-    item.style.top  = (startY + (clientY - mouseStartY) / scale) + "px";
+    item.style.top = (startY + (clientY - mouseStartY) / scale) + "px";
   }
 
   function endDrag() {
@@ -253,7 +253,7 @@ const projectsData = {
       "items/1.png",
       "items/2.png",
       "items/3.png",
-      "items/4.png",  
+      "items/4.png",
       "items/5.png",
       "items/6.png",
       "items/7.png",
@@ -267,27 +267,30 @@ const projectsData = {
   // PROJET 02
   // ─────────────────────────────────────
 
-  project2: {
+  keycloak: {
+    tag: "UX/UI • WEBDESIGN • PROTOTYPAGE",
 
-    tag:
-      "PROJET 02",
+    title: "KEYCLOAK",
 
-    title:
-      "Projet 02",
+    description: `Dans le cadre de mon expérience en entreprise, j’ai travaillé sur la refonte de l’interface de Keycloak, une solution permettant notamment de gérer les utilisateurs, les applications et les accès.
 
-    description:
-      "Description du projet à venir.",
+L’objectif était de repenser l’organisation de l’interface afin de rendre les informations plus accessibles et les différents parcours plus simples à comprendre.
 
-    year:
-      "2025",
+J’ai réalisé plusieurs propositions de maquettes et exploré différentes versions de l’interface. J’ai également travaillé sur les parcours utilisateurs, la navigation et les interactions entre les différents écrans.
 
-    tools:
-      "À définir",
+Ce projet m’a permis d’approfondir ma pratique de l’UX/UI et de réfléchir à la manière de rendre une interface complexe plus claire et intuitive.`,
+
+    year: "2026",
+
+    tools: "Figma • UX/UI • Prototypage",
 
     images: [
-      "items/chat.jpg"
+      "items/Keycloak.png",
+      "items/keycloak-1.png",
+      "items/keycloak-2.png",
+      "items/keycloak-3.png",
+      "items/keycloak-4.png"
     ]
-
   },
 
 
