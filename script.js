@@ -251,6 +251,7 @@ const projectsData = {
     images: [
 
       "items/1.png",
+      "items/8.png",
       "items/2.png",
       "items/3.png",
       "items/4.png",
@@ -287,7 +288,7 @@ Ce projet m’a permis d’approfondir ma pratique de l’UX/UI et de réfléchi
     images: [
       "items/Keycloak.png",
       "items/keycloak-2.png",
-      "items/keycloak-3.mp4",
+      "items/keycloak-3.gif",
       "items/keycloak-4.png"
     ]
   },
