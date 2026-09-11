@@ -298,28 +298,23 @@ Ce projet m’a permis d’approfondir ma pratique de l’UX/UI et de réfléchi
   // PROJET 03
   // ─────────────────────────────────────
 
-  project3: {
+ cd: {
+  tag: "DIRECTION ARTISTIQUE • GRAPHISME • ÉDITION",
+  title: "AFTER HOURS",
+  description: `Pour ce projet, j’ai réalisé une nouvelle interprétation graphique de l’album After Hours de The Weeknd.
 
-    tag:
-      "PROJET 03",
+L’objectif était de créer une identité visuelle autour de l’univers sombre et nocturne de l’album, tout en proposant une direction artistique personnelle.
 
-    title:
-      "Projet 03",
+J’ai travaillé autour d’une palette dominée par le rouge et le noir, en utilisant des photographies, des compositions graphiques, de la typographie et différents éléments visuels inspirés de l’univers de l’artiste.
 
-    description:
-      "Description du projet à venir.",
-
-    year:
-      "2025",
-
-    tools:
-      "À définir",
-
-    images: [
-      "items/chat.jpg"
-    ]
-
-  }
+Le projet comprend la conception de la pochette, la mise en page de la tracklist ainsi que différents supports permettant d’imaginer le rendu final du CD et de son packaging.`,
+  year: "2025",
+  tools: "Photoshop • Illustrator • InDesign",
+  images: [
+    "items/after-hours-1.png",
+    "items/after-hours-2.png"
+  ]
+}
 
 };
 
