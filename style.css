@@ -115,14 +115,11 @@ nav a:hover {
   rotate: calc(5deg);
   width: 390px;
   z-index: 9500;
-
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
   pointer-events: none;
-
   animation: dragHintFade 0.8s ease 2.8s forwards;
 }
 
@@ -130,19 +127,15 @@ nav a:hover {
   position: relative;
   width: 150px;
   height: 150px;
-
   animation: dragCard 2.2s ease-in-out infinite;
 }
 
 .drag-hint-image {
   width: 100%;
   height: 100%;
-
   overflow: hidden;
   border-radius: 18px;
-
   transform: rotate(-6deg);
-
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
 }
 
@@ -153,68 +146,6 @@ nav a:hover {
   display: block;
 }
 
-/* Faux curseur */
-.drag-hint-cursor {
-  position: absolute;
-
-  width: 28px;
-  height: 28px;
-
-  left: 95px;
-  top: 105px;
-
-  animation: dragCursor 2.2s ease-in-out infinite;
-}
-
-.drag-hint-cursor::before {
-  content: "";
-
-  position: absolute;
-
-  width: 0;
-  height: 0;
-
-  border-left: 9px solid white;
-  border-top: 9px solid transparent;
-  border-bottom: 9px solid transparent;
-
-  transform: rotate(-25deg);
-
-  filter: drop-shadow(0 2px 4px rgba(0,0,0,.5));
-}
-
-.drag-hint-cursor span {
-  position: absolute;
-
-  width: 22px;
-  height: 22px;
-
-  border: 1px solid white;
-  border-radius: 50%;
-
-  left: -4px;
-  top: -4px;
-
-  opacity: 0;
-
-  animation: cursorClick 2.2s ease-in-out infinite;
-}
-
-.drag-hint p {
-  margin: 25px 0 5px;
-
-  font-family: inherit;
-  font-size: 13px;
-  letter-spacing: 0.22em;
-
-  color: white;
-}
-
-.drag-hint-sub {
-  font-size: 9px;
-  letter-spacing: 0.25em;
-  opacity: 0.5;
-}
 
 
 /* =========================
