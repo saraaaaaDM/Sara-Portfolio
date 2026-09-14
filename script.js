@@ -269,7 +269,7 @@ const projectsData = {
   // ─────────────────────────────────────
 
   keycloak: {
-    tag: "UX/UI • WEBDESIGN • PROTOTYPAGE",
+    tag: "WEBDESIGN • UX/UI • PROTOTYPAGE",
 
     title: "KEYCLOAK",
 
