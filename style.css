@@ -61,6 +61,49 @@ nav a:hover {
   overflow: hidden;
 }
 
+
+/* ZONE CENTRALE */
+.center-zone {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1200px;
+  height: 600px;
+  transform: translate(-50%, -50%);
+  transform-origin: center center;
+}
+
+/* TITLE */
+.home-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 200px;
+  text-align: center;
+  z-index: 0;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+/* ITEMS */
+.item {
+  position: absolute;
+  cursor: grab;
+  user-select: none;
+  -webkit-user-drag: none;
+  transition: transform 0.15s ease;
+  will-change: transform;
+}
+
+.item:hover {
+  transform: scale(1.1);
+}
+
+.item:active {
+  transform: scale(1.2);
+}
+
 /* =========================
    DRAG HINT
 ========================= */
@@ -134,7 +177,7 @@ nav a:hover {
 
   transform: rotate(-25deg);
 
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, .5));
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,.5));
 }
 
 .drag-hint-cursor span {
@@ -253,48 +296,6 @@ nav a:hover {
     opacity: 0;
     visibility: hidden;
   }
-}
-
-/* ZONE CENTRALE */
-.center-zone {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 1200px;
-  height: 600px;
-  transform: translate(-50%, -50%);
-  transform-origin: center center;
-}
-
-/* TITLE */
-.home-title {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 200px;
-  text-align: center;
-  z-index: 0;
-  pointer-events: none;
-  white-space: nowrap;
-}
-
-/* ITEMS */
-.item {
-  position: absolute;
-  cursor: grab;
-  user-select: none;
-  -webkit-user-drag: none;
-  transition: transform 0.15s ease;
-  will-change: transform;
-}
-
-.item:hover {
-  transform: scale(1.1);
-}
-
-.item:active {
-  transform: scale(1.2);
 }
 
 /* FLOATING GLOBAL */
