@@ -92,45 +92,40 @@ nav a:hover {
 }
 
 .camera-hand {
-  position: absolute;
-  width: 75px;
+  position: fixed;
+  top: 80px;
+  left: -20px;
+  rotate: calc(5deg);
+  width: 390px;
+  width: 95px;
   height: auto;
   z-index: 100;
-
   pointer-events: none;
-
   animation: cameraHandMove 1.6s ease-in-out 3;
 }
 
 @keyframes cameraHandMove {
-
   0% {
     transform: translate(0, 0) rotate(-8deg);
     opacity: 0;
   }
-
   15% {
     opacity: 1;
   }
-
   45% {
     transform: translate(-12px, 8px) rotate(-3deg);
     opacity: 1;
   }
-
   60% {
     transform: translate(-18px, 5px) rotate(0deg);
   }
-
   80% {
     transform: translate(-10px, 7px) rotate(-4deg);
   }
-
   100% {
     transform: translate(0, 0) rotate(-8deg);
     opacity: 0;
   }
-
 }
 
 /* ITEMS */
