@@ -110,7 +110,10 @@ nav a:hover {
 
 .drag-hint {
   position: fixed;
-  inset: 0;
+  top: 80px;
+  left: -20px;
+  rotate: calc(5deg);
+  width: 390px;
   z-index: 9500;
 
   display: flex;
