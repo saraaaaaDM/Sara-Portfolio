@@ -510,3 +510,15 @@ document.addEventListener(
 
   }
 );
+
+// =========================
+// DRAG HINT
+// =========================
+
+const dragHint = document.getElementById("dragHint");
+
+if (dragHint) {
+  setTimeout(() => {
+    dragHint.remove();
+  }, 3800);
+}
