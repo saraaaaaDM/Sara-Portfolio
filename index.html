@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio de Sara Desruels-Marciniak — design graphique, UI/UX, développement web et direction artistique.">
   <title>Portfolio Sara Desruels-Marciniak</title>
   <link rel="icon" type="image/x-icon" href="items/coeur.png">
   <link rel="stylesheet" href="style.css">
@@ -11,254 +12,127 @@
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
-
 <body>
   <div class="cursor"></div>
-
-  <!-- NAVBAR -->
   <nav>
-    <a href="#home">ACCEUIL</a>
-    <a href="#locals">A PROPOS</a>
-    <a href="#folio">PROJETS</a>
-    <a href="#contact">CONTACT</a>
+    <a href="#home" data-i18n="nav-home">ACCUEIL</a>
+    <a href="#locals" data-i18n="nav-about">À PROPOS</a>
+    <a href="#folio" data-i18n="nav-projects">PROJETS</a>
+    <a href="#contact" data-i18n="nav-contact">CONTACT</a>
+    <button id="languageToggle" class="language-toggle" type="button" aria-label="Switch to English" title="Switch to English">EN</button>
   </nav>
 
-  <!-- HOME SECTION -->
   <section id="home" class="home-section">
-
-
     <div class="center-zone">
       <div class="home-title">Portfolio</div>
-
       <div class="camera-container">
         <img src="items/camera.png" class="item camera" alt="Caméra">
-
         <img src="items/hand.png" class="camera-hand" alt="" aria-hidden="true">
       </div>
-      <img src="items/s.png" class="item s">
-      <img src="items/a.png" class="item a1">
-      <img src="items/r.png" class="item r">
-      <img src="items/a.png" class="item a2">
-      <img src="items/coeur.png" class="item coeur">
-      <img src="items/fleur.png" class="item fleur">
-      <img src="items/papier.png" class="item papier">
-      <img src="items/ecouteurs.png" class="item ecouteurs">
-      <img src="items/basket.png" class="item basket">
-      <img src="items/fraise.png" class="item fraise">
-      <img src="items/smiski.png" class="item smiski">
-      <img src="items/dés.png" class="item dés">
-      <img src="items/enveloppe.png" class="item enveloppe">
-      <img src="items/pochette.png" class="item pochette">
-      <img src="items/vinyle.png" class="item vinyle">
+      <img src="items/s.png" class="item s" alt="">
+      <img src="items/a.png" class="item a1" alt="">
+      <img src="items/r.png" class="item r" alt="">
+      <img src="items/a.png" class="item a2" alt="">
+      <img src="items/coeur.png" class="item coeur" alt="">
+      <img src="items/fleur.png" class="item fleur" alt="">
+      <img src="items/papier.png" class="item papier" alt="">
+      <img src="items/ecouteurs.png" class="item ecouteurs" alt="">
+      <img src="items/basket.png" class="item basket" alt="">
+      <img src="items/fraise.png" class="item fraise" alt="">
+      <img src="items/smiski.png" class="item smiski" alt="">
+      <img src="items/dés.png" class="item dés" alt="">
+      <img src="items/enveloppe.png" class="item enveloppe" alt="">
+      <img src="items/pochette.png" class="item pochette" alt="">
+      <img src="items/vinyle.png" class="item vinyle" alt="">
     </div>
-
   </section>
 
-  <!-- ABOUT SECTION -->
   <section id="locals" class="section">
-    <div class="section-left">
-      <h2>A PROPOS</h2>
-    </div>
+    <div class="section-left"><h2 data-i18n="about-title">À PROPOS</h2></div>
     <div class="section-right-about">
       <div class="about-content">
         <img src="items/moi.png" alt="Sara Desruels-Marciniak">
-        <p>Je m’appelle Sara Desruels-Marciniak.
-          J’aime créer des projets qui se situent entre le design, l’image et le numérique. Je suis particulièrement
-          attirée par les univers visuels qui ont une identité forte, les interfaces qui racontent quelque chose et les
-          projets qui permettent d’expérimenter.
-          Je ne cherche pas seulement à faire quelque chose de « beau » : j’aime comprendre pourquoiun projet
-          fonctionne, tester différentes idées, jouer avec les formes, les couleurs, la typographie et les interactions
-          jusqu’à trouver la bonne direction.
-          Curieuse et toujours en train d’explorer de nouvelles choses, je passe facilement du graphisme à l’UI/UX, du
-          développement à la direction artistique. Ce qui m’intéresse surtout, c’est de pouvoir apprendre, expérimenter
-          et donner une vraie personnalité à ce que je crée.
-          Ce portfolio rassemble donc une partie de mes projets, mais surtout ma manière de chercher, d’expérimenter et
-          de créer.
+        <p data-i18n="about-copy">Je m’appelle Sara Desruels-Marciniak.
+J’aime créer des projets qui se situent entre le design, l’image et le numérique. Je suis particulièrement attirée par les univers visuels qui ont une identité forte, les interfaces qui racontent quelque chose et les projets qui permettent d’expérimenter.
 
-          <br>
-          N’hésitez pas à me contacter pour échanger ou collaborer sur des projets créatifs !
-        </p>
+Je ne cherche pas seulement à faire quelque chose de « beau » : j’aime comprendre pourquoi un projet fonctionne, tester différentes idées, jouer avec les formes, les couleurs, la typographie et les interactions jusqu’à trouver la bonne direction.
+
+Curieuse et toujours en train d’explorer de nouvelles choses, je passe facilement du graphisme à l’UI/UX, du développement à la direction artistique. Ce qui m’intéresse surtout, c’est de pouvoir apprendre, expérimenter et donner une vraie personnalité à ce que je crée.
+
+Ce portfolio rassemble donc une partie de mes projets, mais surtout ma manière de chercher, d’expérimenter et de créer.
+
+N’hésitez pas à me contacter pour échanger ou collaborer sur des projets créatifs !</p>
         <div class="about-clearfix"></div>
       </div>
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════
-     FOLIO SECTION
-     ═══════════════════════════════════════ -->
-
   <section id="folio" class="section">
-
-    <div class="section-left">
-      <h2>PROJETS</h2>
-    </div>
-
+    <div class="section-left"><h2 data-i18n="projects-title">PROJETS</h2></div>
     <div class="section-right projects">
-
-      <!-- NOMA -->
       <article class="project-card" data-project="noma">
-
-        <div class="project-media">
-          <img src="items/4.png" alt="NOMA — Swimwear for every body">
-        </div>
-
+        <div class="project-media"><img src="items/4.png" alt="NOMA — Swimwear for every body"></div>
         <div class="project-meta">
-          <span class="tag">BRANDING • DIRECTION ARTISTIQUE</span>
-
+          <span class="tag" data-i18n="noma-tag">BRANDING • DIRECTION ARTISTIQUE</span>
           <h3>NOMA</h3>
-
-          <p>
-            Swimwear for every body — création d’une identité visuelle
-            pensée autour de la diversité des morphologies.
-          </p>
+          <p data-i18n="noma-summary">Swimwear for every body — création d’une identité visuelle pensée autour de la diversité des morphologies.</p>
         </div>
-
       </article>
-
-
-      <!--KEYCLOAK -->
       <article class="project-card" data-project="keycloak">
-
-        <div class="project-media">
-          <img src="items/Keycloak.png" alt="KEYCLOAK">
-        </div>
-
+        <div class="project-media"><img src="items/Keycloak.png" alt="KEYCLOAK"></div>
         <div class="project-meta">
-          <span class="tag">WEBDESIGN • UX/UI • PROTOTYPAGE</span>
-
+          <span class="tag" data-i18n="keycloak-tag">WEBDESIGN • UX/UI • PROTOTYPAGE</span>
           <h3>KEYCLOAK</h3>
-
-          <p>
-            Refonte de l'interface Keycloak pour l'a rendre plus
-            accessible, facile à comprendre et intuitive.
-          </p>
+          <p data-i18n="keycloak-summary">Refonte de l’interface Keycloak pour la rendre plus accessible, facile à comprendre et intuitive.</p>
         </div>
       </article>
-
-      <!--CD AFTER HOURS-->
       <article class="project-card" data-project="cd">
-
-        <div class="project-media">
-          <img src="items/after-hours-1.png" alt="pochette CD After Hours">
-        </div>
-
+        <div class="project-media"><img src="items/after-hours-1.png" alt="Pochette CD After Hours"></div>
         <div class="project-meta">
-          <span class="tag">DIRECTION ARTISTIQUE • GRAPHISME • ÉDITION</span>
-
-          <h3>CD After Hours</h3>
-
-          <p>
-            Création d'une identité visuelle autour d'un album de notre choix
-          </p>
+          <span class="tag" data-i18n="cd-tag">DIRECTION ARTISTIQUE • GRAPHISME • ÉDITION</span>
+          <h3>AFTER HOURS</h3>
+          <p data-i18n="cd-summary">Création d’une identité visuelle autour d’un album de notre choix.</p>
         </div>
-
       </article>
-
-
     </div>
-
   </section>
-
-
-  <!-- ═══════════════════════════════════════
-     POP-UP PROJET
-     ═══════════════════════════════════════ -->
 
   <div class="project-modal" id="projectModal">
-
     <div class="modal-overlay"></div>
-
     <div class="modal-window">
-
-      <button class="modal-close" aria-label="Fermer">
-        ×
-      </button>
-
+      <button class="modal-close" aria-label="Fermer" type="button">×</button>
       <div class="modal-content">
-
-        <!-- GALERIE -->
         <div class="modal-gallery">
-
-          <div class="gallery-main">
-            <img id="modalMainImage" src="" alt="">
-          </div>
-
-          <div class="gallery-thumbnails" id="galleryThumbnails">
-          </div>
-
+          <div class="gallery-main"><img id="modalMainImage" src="" alt=""></div>
+          <div class="gallery-thumbnails" id="galleryThumbnails"></div>
         </div>
-
-
-        <!-- INFORMATIONS -->
         <div class="modal-info">
-
-          <span class="modal-tag" id="modalTag">
-          </span>
-
+          <span class="modal-tag" id="modalTag"></span>
           <h2 id="modalTitle"></h2>
-
           <div class="modal-line"></div>
-
           <p id="modalDescription"></p>
-
           <div class="modal-details">
-
-            <div>
-              <span>ANNÉE</span>
-              <p id="modalYear"></p>
-            </div>
-
-            <div>
-              <span>OUTILS</span>
-              <p id="modalTools"></p>
-            </div>
-
+            <div><span data-i18n="modal-year">ANNÉE</span><p id="modalYear"></p></div>
+            <div><span data-i18n="modal-tools">OUTILS</span><p id="modalTools"></p></div>
           </div>
-
         </div>
-
       </div>
-
     </div>
-
   </div>
 
-  <!-- CONTACT -->
   <section id="contact" class="section contact-section">
-
-    <div class="section-left">
-      <h2>CONTACT</h2>
-    </div>
-
+    <div class="section-left"><h2 data-i18n="contact-title">CONTACT</h2></div>
     <div class="section-right contact-links">
-
-      <!-- Mail -->
       <a href="mailto:desruelsmarciniaksara@gmail.com" class="contact-link">
-        <span class="contact-icon">
-          <i class="fa-regular fa-envelope"></i>
-        </span>
-
-        <span class="contact-name">desruelsmarciniaksara@gmail.com</span>
-
-        <span class="contact-arrow">↗</span>
+        <span class="contact-icon"><i class="fa-regular fa-envelope"></i></span>
+        <span class="contact-name">desruelsmarciniaksara@gmail.com</span><span class="contact-arrow">↗</span>
       </a>
-
-      <!-- Instagram -->
       <a href="https://www.instagram.com/sar_arrrt/" target="_blank" rel="noopener noreferrer" class="contact-link">
-        <span class="contact-icon">
-          <i class="fa-brands fa-instagram"></i>
-        </span>
-
-        <span class="contact-name">@sar_arrrt</span>
-
-        <span class="contact-arrow">↗</span>
+        <span class="contact-icon"><i class="fa-brands fa-instagram"></i></span>
+        <span class="contact-name">@sar_arrrt</span><span class="contact-arrow">↗</span>
       </a>
-
     </div>
-
   </section>
-
   <script src="script.js"></script>
 </body>
-
 </html>
