@@ -1097,3 +1097,28 @@ body.modal-open {
 .contact-link:hover .contact-icon {
   transform: scale(1.15);
 }
+
+/* LANGUAGE SWITCH */
+.language-toggle {
+  position: fixed;
+  top: 20px;
+  right: 22px;
+  z-index: 1001;
+  padding: 7px 12px;
+  border: 1px solid rgba(255,255,255,.65);
+  border-radius: 999px;
+  background: #202020;
+  color: #fff;
+  font: 14px Arial, sans-serif;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background .25s ease, color .25s ease, transform .25s ease;
+}
+.language-toggle:hover { background: #fff; color: #202020; transform: scale(1.05); }
+.about-content p, #modalDescription { white-space: pre-line; }
+nav { padding-right: 75px; }
+@media (max-width: 768px) {
+  nav { padding-right: 55px; }
+  nav a { font-size: clamp(17px, 4vw, 30px); }
+  .language-toggle { top: 62px; right: 12px; }
+}
